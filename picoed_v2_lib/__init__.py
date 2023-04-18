@@ -6,7 +6,7 @@ from .display import Display
 from machine import I2C, Pin
 from .led import Led
 from .button import Button
-from .sound import Sound
+from .music import Music
 
 
 i2c0 = I2C(IIC.BUS0, scl=Pin(IIC.SCL0), sda=Pin(IIC.SDA0))
@@ -14,4 +14,4 @@ display = Display(i2c0)
 led = Led()
 button_a = Button(Gpio.BUTTON_A)
 button_b = Button(Gpio.BUTTON_B)
-sound = Sound()
+music = Music(Pin(Gpio.BUZZER))
