@@ -14,7 +14,6 @@ class Ultrasonic:
         self._last_req_tick_ms = ticks_add(ticks_ms(), -1 * self._interval_ms)
         self._start_tick_us = ticks_us()
         self._us = self._mm = None
-        print("DISTANCE_FACTOR: {}".format(self.DISTANCE_FACTOR))
 
     @property
     def us(self):
